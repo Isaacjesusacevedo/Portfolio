@@ -1,0 +1,19 @@
+/* BASE */
+@import "./global.css";
+
+/* COMPONENTS */
+@import "../Components/buttons.css";
+@import "../Components/tags.css";
+@import "../Components/cards.css";
+
+/* LAYOUT */
+@import "../Layout/navbar.css";
+@import "../Layout/secction.css";
+@import "../Layout/footer.css";
+
+/* PAGES */
+@import "../Page/hero.css";
+@import "../Page/about.css";
+@import "../Page/skills.css";
+@import "../Page/projects.css";
+@import "../Page/contact.css;

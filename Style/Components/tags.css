@@ -1,0 +1,20 @@
+.tags {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    margin: .75rem 0 1.25rem;
+  }
+  
+  .tag {
+    background: linear-gradient(
+      90deg,
+      rgba(124,92,255,.14),
+      rgba(21,198,181,.14)
+    );
+    border: 1px solid rgba(255,255,255,.12);
+    color: var(--text);
+    padding: .35rem .7rem;
+    border-radius: 999px;
+    font-size: .9rem;
+  }
+  

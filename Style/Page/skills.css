@@ -1,0 +1,51 @@
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+  
+  /* Card */
+  .skill {
+    grid-column: span 4;
+    background: var(--card);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(255,255,255,.08);
+  
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  
+    transition: transform .2s ease, border-color .2s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-3px);
+    border-color: rgba(124,92,255,.5);
+  }
+  
+  /* Texto */
+  .skill strong {
+    font-weight: 600;
+  }
+  
+  .skill small {
+    margin-left: auto;
+    font-size: .8rem;
+    color: var(--muted);
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .skill {
+      grid-column: span 6;
+    }
+  }
+  
+  @media (max-width: 520px) {
+    .skill {
+      grid-column: span 12;
+    }
+  }
+  

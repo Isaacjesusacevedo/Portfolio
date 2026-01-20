@@ -1,0 +1,11 @@
+.btn-brand {
+    background: linear-gradient(90deg, var(--brand), var(--brand-2));
+    color: #fff;
+    border-radius: 999px;
+    border: none;
+  }
+  
+  .btn-brand:hover {
+    filter: brightness(1.08);
+  }
+  
