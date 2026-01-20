@@ -2,8 +2,8 @@
    VARIABLES
 ========================= */
 
-/* 🌙 Dark (default) */
-:root {
+/* 🌙 Dark Mode */
+:root, body.dark {
   --bg: #0f0f11;
   --bg-soft: #17171a;
   --card: #1f1f24;
@@ -15,7 +15,7 @@
   --radius: 22px;
 }
 
-/* ☀️ Light */
+/* ☀️ Light Mode */
 body.light {
   --bg: #f4f4f6;
   --bg-soft: #ffffff;
