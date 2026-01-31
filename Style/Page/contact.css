@@ -1,20 +1,4 @@
-.contact-card {
-    background: var(--bg-soft);
-    border-radius: var(--radius);
-    padding: 2rem;
-    max-width: 880px;
-    margin-inline: auto;
-    border: 1px solid rgba(255,255,255,.06);
-    box-shadow: var(--shadow);
-  }
-  
-  .contact-item {
-    background: var(--card);
-    border-radius: 12px;
-    padding: .75rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: .75rem;
-    border: 1px solid rgba(255,255,255,.06);
-  }
-  
+.contact-item .fw-bold {
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}

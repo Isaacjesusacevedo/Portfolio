@@ -1,80 +1,264 @@
 /* HERO */
 header.hero {
-    min-height: 92vh;
-    display: grid;
-    place-items: center;
-    padding-top: 4rem;
-  }
-  
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Partículas animadas de fondo */
+header.hero::before,
+header.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 20s ease-in-out infinite;
+  z-index: 0;
+}
+
+header.hero::before {
+  width: 500px;
+  height: 500px;
+  background: var(--brand);
+  top: 10%;
+  left: -10%;
+  animation-delay: -5s;
+}
+
+header.hero::after {
+  width: 400px;
+  height: 400px;
+  background: var(--brand-2);
+  bottom: 10%;
+  right: -10%;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+.hero-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+  width: min(1100px, 92%);
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@media (max-width: 992px) {
   .hero-card {
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
+    grid-template-columns: 1fr;
+    text-align: center;
     gap: 3rem;
-    align-items: center;
-    width: min(1100px, 92%);
   }
-  
-  @media (max-width: 992px){
-    .hero-card{
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
+}
+
+.hero h1 {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 0.5rem 0 1rem;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.hero .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+  padding: 0.5rem 1rem;
+  background: var(--card);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: fadeInUp 0.8s ease-out 0.1s backwards;
+  position: relative;
+}
+
+.hero .badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .hero h1 {
-    font-weight: 900;
-    letter-spacing: .4px;
-    line-height: 1.08;
-    font-size: clamp(2rem, 5vw, 3.2rem);
+  50% { 
+    opacity: 0.5;
+    transform: scale(1.2);
   }
-  
-  .hero p {
-    color: var(--muted);
-    font-size: 1.05rem;
-  }
-  
+}
+
+.hero .tags {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.5rem;
+  animation: fadeInUp 0.8s ease-out 0.3s backwards;
+}
+
+@media (max-width: 992px) {
   .hero .tags {
-    display: flex;
-    gap: .6rem;
-    flex-wrap: wrap;
-    margin: .75rem 0 1.25rem;
+    justify-content: center;
   }
-  
-  .tag {
-    background: linear-gradient(
-      90deg,
-      rgba(124,92,255,.14),
-      rgba(21,198,181,.14)
-    );
-    border: 1px solid rgba(255,255,255,.12);
-    color: var(--text);
-    padding: .35rem .7rem;
-    border-radius: 999px;
-    font-size: .9rem;
-  }
-  
-  .grad-text {
-    background: linear-gradient(90deg,var(--brand),var(--brand-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+}
+
+.tag {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.15),
+    rgba(20, 184, 166, 0.15)
+  );
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tag::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
+}
+
+.tag:hover::before {
+  left: 100%;
+}
+
+.grad-text {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.portrait {
+  width: 320px;
+  aspect-ratio: 1;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  justify-self: center;
+  /* Fondo gradiente sutil */
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.08), 
+    rgba(20, 184, 166, 0.08)
+  );
+  position: relative;
+  animation: fadeInUp 0.8s ease-out 0.5s backwards;
+  border: 3px solid rgba(139, 92, 246, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portrait::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 30px;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.portrait:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(139, 92, 246, 0.3),
+    0 0 0 1px rgba(139, 92, 246, 0.1);
+}
+
+.portrait:hover::before {
+  opacity: 1;
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  /* CAMBIADO: Volver a 'cover' para llenar todo el espacio */
+  object-fit: cover;
+  /* CLAVE: Ajustar la posición para centrar mejor el rostro */
+  object-position: center top;
+  display: block;
+  filter: saturate(1.05) contrast(1.08) brightness(1.02);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.portrait:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.15) contrast(1.12) brightness(1.05);
+}
+
+.hero .d-flex {
+  animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+@media (max-width: 992px) {
+  .hero .d-flex {
+    justify-content: center !important;
   }
   
   .portrait {
     width: 280px;
-    aspect-ratio: 1;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    justify-self: center;
-    background: var(--card);
   }
-  
-  .portrait img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: saturate(1.05);
+}
+
+@media (max-width: 576px) {
+  .portrait {
+    width: 240px;
   }
-  
+}

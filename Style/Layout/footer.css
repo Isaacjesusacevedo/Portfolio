@@ -1,6 +1,37 @@
 footer {
-    padding: 42px 0;
-    color: var(--muted);
-    border-top: 1px solid rgba(255,255,255,.06);
-  }
-  
+  padding: 3rem 0;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(139, 92, 246, 0.03) 100%
+  );
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--brand), transparent);
+  border-radius: 2px;
+}
+
+footer small {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+footer a {
+  color: var(--brand);
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--brand-2);
+}
