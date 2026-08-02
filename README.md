@@ -1,38 +1,40 @@
 Portfolio Personal — Isaac Acevedo
 Desarrollador Web Junior | JavaScript · Node.js · React · Vue.js · SQL Server · Git · APIs REST
 
-─────────────────────────────────────
-
-🌐 Demo en vivo
-👉 Ver portfolio online
+[🌐 Ver Demo en Vivo] [📧 Contacto] [💼 LinkedIn]
 
 ─────────────────────────────────────
 
 📋 Sobre este proyecto
 Este es mi portfolio personal...
 
-🛠️ Tecnologías utilizadas
-Frontend
-  • HTML5 — Estructura semántica...
-  • CSS3 — Estilos personalizados...
-  • JavaScript — Funcionalidades...
-  • Bootstrap 5.3 — Framework CSS...
+🛠️ Stack Tecnológico
+[HTML5] [CSS3] [JavaScript] [Bootstrap 5.3] [Git] [GitHub Pages] [EmailJS]
+
+Metodologías aplicadas
+  • Responsive Design
+  • Mobile-First
+  • Accesibilidad Web (a11y)
+  • SEO
 
 📂 Estructura del proyecto
 Portfolio/
-├── index.html
+├── index.html              # Página principal...
 ├── JS/
-│   ├── Form.js
-│   └── them.js
+│   ├── Form.js             # Validación...
+│   └── them.js             # Alternancia...
 ...
 
 ✨ Funcionalidades destacadas
-| Funcionalidad          | Descripción                           |
-|------------------------|---------------------------------------|
-| Tema claro/oscuro      | Alternancia dinámica...               |
-| Formulario de contacto | Validación + EmailJS...               |
+| Funcionalidad          | Descripción              | Tecnología              |
+|------------------------|--------------------------|-------------------------|
+| Tema claro/oscuro      | Alternancia dinámica...  | JavaScript + CSS vars   |
+| Formulario de contacto | Validación + EmailJS...  | JavaScript + EmailJS    |
 ...
 
-📬 Contacto
-  • Email: isaac.acevedor1610@gmail.com
-  • LinkedIn: linkedin.com/in/isaac-acevedo
+🚧 Próximos pasos
+Estoy ampliando mi stack hacia el desarrollo full-stack:
+  • API REST con Node.js + Express + SQL Server
+  • Frontend con React
+  • Autenticación con JWT
+  • Testing con Jest
