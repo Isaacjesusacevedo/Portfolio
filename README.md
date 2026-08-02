@@ -36,23 +36,24 @@ Mobile-First — Desarrollo priorizando dispositivos móviles
 Accesibilidad Web (a11y) — Atributos ARIA, contraste, navegación por teclado
 SEO — Meta tags Open Graph, Twitter Cards, Schema.org
 
+📂 Estructura del proyecto
 Portfolio/
-├── index.html              # Página principal
-├── JS/
-│   ├── Form.js             # Validación y envío de formularios
-│   └── them.js             # Tema claro/oscuro
-├── Style/
-│   └── Base/
-│       └── main.css        # Estilos personalizados
-├── media/
-│   ├── fotocv.jpeg
-│   ├── about-imagen.png
-│   ├── SistemaAcademico.png
-│   ├── Gestion inventario.png
-│   ├── BienvenidaAppLibreria.png
-│   ├── OrangeBlue.png
-│   └── cvisaacjesusacevedo.pdf
-└── README.md
+index.html — Página principal (HTML5 semántico, SEO-friendly)
+JS/
+Form.js — Validación y envío del formulario (EmailJS)
+them.js — Alternancia de tema claro/oscuro (localStorage)
+Style/Base/
+main.css — Estilos personalizados + variables CSS
+media/
+fotocv.jpeg — Foto de perfil
+about-imagen.png — Imagen "Sobre mí"
+SistemaAcademico.png — Captura: Sistema Académico
+Gestion inventario.png — Captura: Gestión de Galones
+BienvenidaAppLibreria.png — Captura: Sistema de Librerías
+OrangeBlue.png — Captura: Orange-Blue
+cvisaacjesusacevedo.pdf — CV descargable
+README.md — Documentación del proyecto
+
 
 
 ✨ Funcionalidades destacadas
