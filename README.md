@@ -37,22 +37,27 @@ Accesibilidad Web (a11y) — Atributos ARIA, contraste, navegación por teclado
 SEO — Meta tags Open Graph, Twitter Cards, Schema.org
 
 📂 Estructura del proyecto
+```text
 Portfolio/
-index.html — Página principal (HTML5 semántico, SEO-friendly)
-JS/
-Form.js — Validación y envío del formulario (EmailJS)
-them.js — Alternancia de tema claro/oscuro (localStorage)
-Style/Base/
-main.css — Estilos personalizados + variables CSS
-media/
-fotocv.jpeg — Foto de perfil
-about-imagen.png — Imagen "Sobre mí"
-SistemaAcademico.png — Captura: Sistema Académico
-Gestion inventario.png — Captura: Gestión de Galones
-BienvenidaAppLibreria.png — Captura: Sistema de Librerías
-OrangeBlue.png — Captura: Orange-Blue
-cvisaacjesusacevedo.pdf — CV descargable
-README.md — Documentación del proyecto
+├── index.html                  # Página principal (HTML5 semántico, SEO-friendly)
+├── JS/
+│   ├── Form.js                 # Validación + envío del formulario (EmailJS)
+│   └── them.js                 # Tema claro/oscuro (localStorage), scrollspy, animaciones
+├── Style/
+│   ├── Base/                   # main.css, global.css (variables, reset)
+│   ├── Components/             # buttons.css, cards.css, tags.css
+│   ├── Layout/                 # navbar.css, footer.css, secction.css
+│   └── Page/                   # hero.css, about.css, skills.css, projects.css, contact.css
+├── media/
+│   ├── fotocv.jpeg             # Foto de perfil (hero)
+│   ├── about-imagen.png        # Imagen "Sobre mí"
+│   ├── SistemaAcademico.png    # Capturas de proyectos
+│   ├── Gestion inventario.png
+│   ├── BienvenidaAppLibreria.png
+│   ├── OrangeBlue.png
+│   └── cvisaacjesusacevedo.pdf # CV descargable
+└── README.md                   # Este archivo
+```
 
 
 
@@ -97,12 +102,10 @@ xdg-open index.html
 Nota: El formulario de contacto requiere una clave de EmailJS para funcionar en local. En la demo en vivo ya está configurado.
 
 🚧 Próximos pasos
-Estoy ampliando mi stack hacia el desarrollo full-stack:
-API REST con Node.js + Express + SQL Server
-Frontend con React (componentes, hooks, routing)
-Autenticación con JWT
-Testing con Jest
-Estos proyectos se sumarán próximamente a este portfolio.
+- Testing automatizado (MSTest + Moq en .NET, Vitest/Playwright en frontend)
+- PWA / modo offline-first
+- Gráficos en dashboards (Chart.js)
+- Reportes exportables a PDF
 
 📬 Contacto
 | Canal         | Link                                                                                            |
