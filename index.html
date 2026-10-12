@@ -7,17 +7,24 @@
   <meta name="keywords" content="Isaac Acevedo, Desarrollador Web, Vue.js, TypeScript, ASP.NET Core, C#, SQL Server, PostgreSQL, JavaScript, Node.js, React, Git, APIs REST, Scrum, Argentina" />
   <meta name="author" content="Isaac Acevedo" />
   <title>Isaac Acevedo – Desarrollador Web</title>
+  <link rel="canonical" href="https://isaacjesusacevedo.github.io/Portfolio/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0a0c" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f8f9fa" media="(prefers-color-scheme: light)" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://isaacjesusacevedo.github.io/Portfolio/" />
   <meta property="og:title" content="Isaac Acevedo – Desarrollador Web" />
   <meta property="og:description" content="Desarrollador Web especializado en Vue.js, TypeScript, ASP.NET Core y SQL Server. Metodologías ágiles y APIs REST." />
-  <meta property="og:image" content="media/fotocv.jpeg" />
+  <meta property="og:image" content="https://isaacjesusacevedo.github.io/Portfolio/media/fotocv.jpeg" />
+  <meta property="og:locale" content="es_AR" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="Isaac Acevedo – Desarrollador Web" />
   <meta property="twitter:description" content="Desarrollador Web | Vue.js · TypeScript · ASP.NET Core · SQL Server · PostgreSQL · APIs REST · Git" />
+  <meta property="twitter:image" content="https://isaacjesusacevedo.github.io/Portfolio/media/fotocv.jpeg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,9 +54,19 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Portfolio de Isaac Acevedo",
+    "url": "https://isaacjesusacevedo.github.io/Portfolio/",
+    "inLanguage": "es-AR"
+  }
+  </script>
 </head>
 
 <body class="light" data-bs-spy="scroll" data-bs-target="#topnav" data-bs-smooth-scroll="true" tabindex="0">
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
 
   <!-- NAVBAR -->
   <nav id="topnav" class="navbar navbar-expand-lg fixed-top">
@@ -122,6 +139,8 @@
           <strong>Analista en Sistemas en curso (3er año)</strong>.
           Trabajo con <strong>Vue 3, TypeScript y ASP.NET Core</strong>, y con
           bases de datos <strong>SQL Server y PostgreSQL</strong>.
+          <strong>+5 años</strong> optimizando procesos industriales y amplío mi
+          stack con <strong>Node.js y React</strong> (en formación).
         </p>
 
         <div class="hero-cta">
@@ -213,6 +232,13 @@
             <strong>código limpio y mantenible</strong>, aplicando buenas prácticas.
           </p>
 
+          <p class="about-intro">
+            <strong>Digitalizo procesos manuales para PyMEs</strong>, llevando proyectos
+            desde el problema hasta la solución deployada. Aplico
+            <strong>Scrum/Kanban</strong> para organizar el trabajo y entregar valor
+            en cada iteración.
+          </p>
+
           <div class="about-highlights">
             <div class="highlight-item">
               <div class="highlight-icon">💻</div>
@@ -280,8 +306,8 @@
             </div>
             <p class="timeline-company">Toxic Shine</p>
             <ul class="timeline-tasks">
-              <li>Diseñé e implementé por iniciativa propia un <strong>sistema de control de gestión</strong> que reemplazó procesos manuales.</li>
-              <li>En 2023 desarrollé <strong>Sistema Industrial</strong>, web full-stack con <strong>+40% productividad</strong> y <strong>−60% errores</strong>.</li>
+              <li>Diseñé e implementé por iniciativa propia un <strong>sistema de control de gestión</strong> que reemplazó procesos manuales, con <strong>80% de tareas automatizadas</strong>.</li>
+              <li>En 2023 desarrollé <strong>Sistema Industrial</strong>, web full-stack con <strong>+40% productividad</strong>, <strong>−60% errores</strong> y control de stock de <strong>3h a 1h</strong>.</li>
               <li>Analicé grandes volúmenes de información diariamente bajo plazos exigentes.</li>
               <li>Coordiné equipos multidisciplinarios fortaleciendo comunicación y organización.</li>
             </ul>
@@ -326,6 +352,20 @@
             <li>JWT / Refresh Tokens</li>
             <li>Stored Procedures</li>
             <li class="skill-muted">Node.js · en formación</li>
+          </ul>
+        </div>
+
+        <!-- Arquitectura y Testing -->
+        <div class="skill-card">
+          <div class="skill-icon">🧪</div>
+          <h3 class="skill-title">Arquitectura y Testing</h3>
+          <ul class="skill-list">
+            <li>N-Tier (AD → BR → API)</li>
+            <li>Diseño de APIs REST</li>
+            <li>MSTest + Moq</li>
+            <li>EF Core InMemory</li>
+            <li>Docker</li>
+            <li>CI/CD GitHub Actions</li>
           </ul>
         </div>
 
@@ -400,7 +440,7 @@
           <div class="project-badge">★ Destacado</div>
 
           <div class="project-image">
-            <img src="media/sistema-industrial.png" alt="Dashboard de Sistema Industrial" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+            <img src="media/sistema-industrial.png" alt="Dashboard de Sistema Industrial" loading="lazy" onerror="this.style.display='none'">
           </div>
 
           <div class="project-body">
@@ -418,6 +458,11 @@
             con dark mode y responsive. Reemplazó 5 años de planillas Excel (+40% productividad).
             <em>En producción desde 2023.</em>
           </p>
+          <ul class="project-features">
+            <li>Bulk create + wizard de carga inicial</li>
+            <li>34 tests unitarios en verde</li>
+            <li>Deploy Vercel + Render + SQL Server</li>
+          </ul>
           <footer class="project-links">
             <a href="https://sistema-industrial-teal.vercel.app/semanas" target="_blank" rel="noopener" class="btn btn-brand btn-sm">
               <span class="btn-icon">↗</span> Ver demo
@@ -432,7 +477,7 @@
         <!-- Proyecto 1: Sistema de Gestión Institucional -->
         <article class="project">
           <div class="project-image">
-            <img src="media/sistema-academico.png" alt="Sistema de Gestión Institucional" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+            <img src="media/sistema-academico.png" alt="Sistema de Gestión Institucional" loading="lazy" onerror="this.style.display='none'">
           </div>
 
           <div class="project-body">
@@ -445,6 +490,10 @@
             Backend en <strong>ASP.NET Core 9</strong> con arquitectura N-Tier (AD → BR → API), autenticación <strong>JWT</strong>
             y hash con BCrypt, más 44 tests (MSTest + Moq). Frontend en <strong>Vue 3 + TypeScript</strong>. <em>Proyecto en equipo.</em>
           </p>
+          <ul class="project-features">
+            <li>Arquitectura N-Tier por capas</li>
+            <li>44 tests con JWT + BCrypt</li>
+          </ul>
           <footer class="project-links">
             <a href="https://paginawebtupacamaru.netlify.app/login" target="_blank" rel="noopener" class="btn btn-brand btn-sm">
               <span class="btn-icon">↗</span> Ver demo
@@ -459,7 +508,7 @@
         <!-- Proyecto 2: Brana -->
         <article class="project">
           <div class="project-image">
-            <img src="media/brana.png" alt="Brana — Esoteric Store" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+            <img src="media/brana.png" alt="Brana — Esoteric Store" loading="lazy" onerror="this.style.display='none'">
           </div>
 
           <div class="project-body">
@@ -472,6 +521,10 @@
             con login <strong>JWT</strong> y carga de imágenes a <strong>Cloudinary</strong>. Backend <strong>ASP.NET Core 9 + EF Core</strong>
             sobre <strong>PostgreSQL (Supabase)</strong>, desplegado con Docker.
           </p>
+          <ul class="project-features">
+            <li>Carrito + checkout de invitado</li>
+            <li>Panel admin con Cloudinary</li>
+          </ul>
           <footer class="project-links">
             <a href="https://transcendent-torrone-b7c5f8.netlify.app" target="_blank" rel="noopener" class="btn btn-brand btn-sm">
               <span class="btn-icon">↗</span> Ver demo
@@ -486,7 +539,7 @@
         <!-- Proyecto 3: MyMQueens -->
         <article class="project">
           <div class="project-image">
-            <img src="media/mymqueens.png" alt="MyMQueens" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+            <img src="media/mymqueens.png" alt="MyMQueens" loading="lazy" onerror="this.style.display='none'">
           </div>
 
           <div class="project-body">
@@ -499,6 +552,10 @@
             múltiple de servicios por reserva. Interfaz responsive construida con <strong>Vue 3 + Vite + TypeScript</strong>
             y publicada en GitHub Pages.
           </p>
+          <ul class="project-features">
+            <li>Combos con descuento</li>
+            <li>100% responsive</li>
+          </ul>
           <footer class="project-links">
             <a href="https://isaacjesusacevedo.github.io/MyMQueens/" target="_blank" rel="noopener" class="btn btn-brand btn-sm">
               <span class="btn-icon">↗</span> Ver demo
@@ -513,7 +570,7 @@
         <!-- Proyecto 4: Este portfolio -->
         <article class="project">
           <div class="project-image">
-            <img src="media/portfolio.png" alt="Este portfolio" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+            <img src="media/portfolio.png" alt="Este portfolio" loading="lazy" onerror="this.style.display='none'">
           </div>
 
           <div class="project-body">
@@ -526,6 +583,10 @@
             formulario de contacto con validación y envío real de emails (EmailJS), SEO con Open Graph y Schema.org,
             y buenas prácticas de accesibilidad.
           </p>
+          <ul class="project-features">
+            <li>Tema claro/oscuro persistente</li>
+            <li>SEO + Schema.org</li>
+          </ul>
           <footer class="project-links">
             <a href="https://github.com/Isaacjesusacevedo/Portfolio" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
               <span class="btn-icon"></span> Código
@@ -535,15 +596,15 @@
         </article>
       </div>
 
-      <!-- Próximos proyectos -->
+      <!-- Roadmap -->
       <div class="mt-5 p-4 rounded" style="background: var(--surface-2); border: 1px dashed var(--border);">
-        <h3 class="h5 mb-2">🚧 En desarrollo</h3>
-        <p class="text-secondary mb-0">
-          Actualmente estoy profundizando en <strong>testing automatizado</strong>
-          (MSTest + Moq en .NET, Vitest/Playwright en frontend) y <strong>PWA</strong>
-          para llevar mis apps a modo offline-first.
-          Pronto se reflejará en nuevos proyectos de este portfolio.
-        </p>
+        <h3 class="h5 mb-3">🚧 En desarrollo / Roadmap</h3>
+        <ul class="project-features" style="margin-bottom: 0;">
+          <li>Testing automatizado: Vitest + Playwright en frontend</li>
+          <li>PWA con modo offline-first</li>
+          <li>Gráficos con Chart.js en dashboards</li>
+          <li>Reportes exportables a PDF</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -562,7 +623,7 @@
               <span class="pill">En curso – 3er año</span>
             </div>
             <p class="text-secondary mb-2"><strong>ISFD y T N°114 – Instituto Tupac Amaru</strong></p>
-            <p class="text-secondary mb-0">Formación en análisis, diseño y desarrollo de sistemas informáticos. Programación, bases de datos, redes y metodologías ágiles.</p>
+            <p class="text-secondary mb-0">Formación en análisis, diseño y desarrollo de sistemas informáticos. Programación, bases de datos, redes y metodologías ágiles. Enfoque actual: <strong>arquitectura en capas, POO, modelado de BD y desarrollo de software</strong>.</p>
           </div>
         </div>
 
@@ -708,6 +769,15 @@
             <li><a href="https://github.com/Isaacjesusacevedo" target="_blank" rel="noopener">GitHub</a></li>
           </ul>
         </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Calidad</h5>
+          <ul class="footer-links">
+            <li>CI/CD con GitHub Actions</li>
+            <li>SEO con Schema.org</li>
+            <li>Accesibilidad WCAG 2.1</li>
+          </ul>
+        </div>
       </div>
 
       <div class="footer-bottom">
@@ -724,6 +794,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- Custom Scripts -->
+  <script src="js/toast.js"></script>
   <script src="js/form.js"></script>
   <script src="js/theme.js"></script>
 

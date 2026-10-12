@@ -5,8 +5,12 @@ const root = document.documentElement;
 if (!toggleBtn) {
     console.error("ERROR: No se encontró el botón con ID 'theme-toggle'");
 } else {
-    // 1. Cargar tema inicial (sin transición para evitar flash)
-    const savedTheme = localStorage.getItem("theme") || "light";
+    // 1. Cargar tema inicial (sin transición para evitar flash).
+    // Prioridad: localStorage > prefers-color-scheme del sistema > claro.
+    const systemPrefersDark = window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem("theme") ||
+      (systemPrefersDark ? "dark" : "light");
 
     body.style.transition = 'none';
     body.classList.add(savedTheme);
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Animar cards de skills
-    const skills = document.querySelectorAll('.skill-card, .skill');
+    const skills = document.querySelectorAll('.skill-card');
     skills.forEach((skill, index) => {
         skill.style.opacity = '0';
         skill.style.transform = 'translateY(20px)';

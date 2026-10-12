@@ -41,13 +41,14 @@ SEO — Meta tags Open Graph, Twitter Cards, Schema.org
 Portfolio/
 ├── index.html                  # Página principal (HTML5 semántico, SEO-friendly)
 ├── js/
-│   ├── form.js                 # Validación + envío del formulario (EmailJS)
-│   └── theme.js                # Tema claro/oscuro (localStorage), scrollspy, animaciones
+│   ├── form.js                 # Validación en tiempo real + envío (EmailJS) + toasts
+│   ├── theme.js                # Tema claro/oscuro (localStorage + sistema), scrollspy, animaciones
+│   └── toast.js                # Notificaciones no bloqueantes (aria-live)
 ├── css/
-│   ├── base/                   # main.css, global.css (variables, reset)
+│   ├── base/                   # main.css, global.css (variables, reset, a11y, toasts)
 │   ├── components/             # buttons.css, cards.css, tags.css
 │   ├── layout/                 # navbar.css, footer.css, section.css
-│   └── pages/                  # hero.css, about.css, skills.css, projects.css, contact.css
+│   └── pages/                  # hero.css, about.css, skills.css, projects.css, contact.css, experience.css
 ├── media/
 │   ├── fotocv.jpeg             # Foto de perfil (hero)
 │   ├── about-imagen.png        # Imagen "Sobre mí"
