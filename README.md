@@ -52,10 +52,15 @@ Portfolio/
 ├── media/
 │   ├── fotocv.jpeg             # Foto de perfil (hero)
 │   ├── about-imagen.png        # Imagen "Sobre mí"
-│   ├── sistema-academico.png   # Capturas de proyectos
-│   ├── gestion-inventario.png
-│   ├── bienvenida-app-libreria.png
-│   ├── orange-blue.png
+│   ├── SistemaIndustrialFotoM.png      # Banner: Sistema Industrial
+│   ├── SistemaIndustrialFotoProducto.png # Hover: Sistema Industrial
+│   ├── Sistema-Academico.png   # Banner: Gestión Institucional
+│   ├── Sistema-academico-Formulario.png # Hover: Gestión Institucional
+│   ├── Brana.png               # Banner: Brana
+│   ├── Brana-Filisofia.png     # Hover: Brana
+│   ├── MYMQueens.png           # Banner: MyMQueens
+│   ├── MYMQueens-Turnos.png    # Hover: MyMQueens
+│   ├── orange-blue.png         # Imagen: Este portfolio
 │   └── cvisaacjesusacevedo.pdf # CV descargable
 └── README.md                   # Este archivo
 ```
@@ -72,6 +77,7 @@ Portfolio/
 | **Accesibilidad**          | Atributos ARIA, contraste, navegación por teclado     | WCAG 2.1                         |
 | **Lazy loading**           | Carga diferida de imágenes para mejor rendimiento     | Native lazy loading              |
 | **Scroll spy**             | Navegación activa que resalta la sección visible      | Bootstrap ScrollSpy              |
+| **Hover image swap**       | Las tarjetas de proyecto cambian de imagen al hover   | CSS (opacity + transform)        |
 
 
 🖼️ Secciones del portfolio
