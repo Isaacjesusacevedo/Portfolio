@@ -26,7 +26,7 @@ section.section {
   .section p.lead {
     color: var(--muted);
     font-size: 1.15rem;
-    line-height: 1.6;
+    line-height: 1.7;
     max-width: 700px;
   }
   

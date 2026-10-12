@@ -7,8 +7,8 @@
   --bg: #0a0a0c;
   --bg-soft: #14141a;
   --card: #1a1a24;
-  --text: #f0f0f5;
-  --muted: #a0a0b0;
+  --text: #f5f5fa;
+  --muted: #b8b8c8;
   --brand: #8b5cf6;
   --brand-2: #14b8a6;
   --brand-light: rgba(139, 92, 246, 0.1);
@@ -24,7 +24,7 @@ body.light {
   --bg-soft: #ffffff;
   --card: #f3f4f6;
   --text: #111827;
-  --muted: #6b7280;
+  --muted: #4b5563;
   --brand-light: rgba(139, 92, 246, 0.08);
   --shadow: 0 20px 50px rgba(0,0,0,.08);
   --shadow-hover: 0 30px 70px rgba(0,0,0,.12);
