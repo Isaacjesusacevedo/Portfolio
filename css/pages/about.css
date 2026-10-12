@@ -1,15 +1,15 @@
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: start;
   margin-top: var(--sp-5);
 }
 
 .about-visual {
   position: relative;
   width: 100%;
-  max-width: 780px;
-  margin-inline: auto;
+  min-width: 0;
 }
 
 .about-image-wrapper {
@@ -33,7 +33,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .stat-card {
@@ -63,9 +63,7 @@
 }
 
 .about-content {
-  max-width: 780px;
-  margin-inline: auto;
-  width: 100%;
+  min-width: 0;
 }
 
 .about-intro {
@@ -128,8 +126,36 @@
 }
 
 @media (max-width: 992px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-visual {
+    max-width: 720px;
+    margin-inline: auto;
+    width: 100%;
+  }
+
   .about-stats {
     margin-top: 1.5rem;
+  }
+
+  .about-content {
+    max-width: 720px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-visual {
+    max-width: 100%;
+  }
+
+  .about-content {
+    max-width: 100%;
+    padding-inline: 0.25rem;
   }
 }
 
