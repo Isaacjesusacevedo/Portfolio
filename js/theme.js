@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Animar cards de skills
-    const skills = document.querySelectorAll('.skill');
+    const skills = document.querySelectorAll('.skill-card, .skill');
     skills.forEach((skill, index) => {
         skill.style.opacity = '0';
         skill.style.transform = 'translateY(20px)';

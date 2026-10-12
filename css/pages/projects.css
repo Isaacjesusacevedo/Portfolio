@@ -1,28 +1,140 @@
 /* PROJECTS */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 1.5rem;
+  margin-top: 2.5rem;
 }
 
-.project {
+/* Tarjeta */
+.projects-grid .project {
+  grid-column: auto;
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
   transition: var(--transition);
+
+  /* Layout interno consistente */
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;      /* todas las tarjetas tienen la misma altura mínima */
 }
 
-.project:hover {
+.projects-grid .project:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+/* Header */
+.project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.project-tags {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand-2);
+  letter-spacing: 0.02em;
+  font-family: 'Courier New', monospace;
+}
+
+/* Descripción */
+.project-description {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;           /* ocupa el espacio disponible */
+}
+
+.project-description strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.project-description em {
+  color: var(--brand);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Botones */
+.project-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: auto;       /* siempre al fondo */
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.83rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Botón primario (Ver demo) */
+.btn-brand.btn-sm {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+  color: #fff;
+  border: none;
+}
+
+.btn-brand.btn-sm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+/* Botón secundario (Código) */
+.btn-outline.btn-sm {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline.btn-sm:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  transform: translateY(-2px);
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .projects-grid {
-    gap: 1.25rem;
-  }
-}
-
 @media (max-width: 576px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+  .projects-grid .project {
+    min-height: auto;
   }
 }
