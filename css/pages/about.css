@@ -1,44 +1,37 @@
 .about-layout {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
   margin-top: var(--sp-5);
 }
 
 .about-visual {
   position: relative;
+  width: 100%;
 }
 
 .about-image-wrapper {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-}
-
-.about-image-wrapper::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), transparent);
-  z-index: 1;
-  pointer-events: none;
+  box-shadow: var(--shadow);
+  aspect-ratio: 16/9;
+  background: var(--card);
 }
 
 .about-image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 .about-stats {
-  position: absolute;
-  bottom: -30px;
-  right: -20px;
-  display: flex;
-  gap: 0.75rem;
-  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .stat-card {
@@ -48,7 +41,7 @@
   padding: 0.9rem 1.2rem;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  min-width: 90px;
+  min-width: 0;
 }
 
 .stat-value {
@@ -65,6 +58,12 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.about-content {
+  max-width: 780px;
+  margin-inline: auto;
+  width: 100%;
 }
 
 .about-intro {
@@ -127,26 +126,21 @@
 }
 
 @media (max-width: 992px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
   .about-stats {
-    position: static;
-    justify-content: center;
     margin-top: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .about-layout {
+    gap: 1.5rem;
+  }
+
   .about-image-wrapper {
-    overflow: hidden;
     max-width: 100%;
   }
 
   .about-stats {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
     overflow: visible;
@@ -160,5 +154,9 @@
 
   .stat-value {
     font-size: clamp(1.1rem, 6vw, 1.4rem);
+  }
+
+  .about-content {
+    padding-inline: 0.25rem;
   }
 }
