@@ -40,21 +40,21 @@ SEO — Meta tags Open Graph, Twitter Cards, Schema.org
 ```text
 Portfolio/
 ├── index.html                  # Página principal (HTML5 semántico, SEO-friendly)
-├── JS/
-│   ├── Form.js                 # Validación + envío del formulario (EmailJS)
-│   └── them.js                 # Tema claro/oscuro (localStorage), scrollspy, animaciones
-├── Style/
-│   ├── Base/                   # main.css, global.css (variables, reset)
-│   ├── Components/             # buttons.css, cards.css, tags.css
-│   ├── Layout/                 # navbar.css, footer.css, secction.css
-│   └── Page/                   # hero.css, about.css, skills.css, projects.css, contact.css
+├── js/
+│   ├── form.js                 # Validación + envío del formulario (EmailJS)
+│   └── theme.js                # Tema claro/oscuro (localStorage), scrollspy, animaciones
+├── css/
+│   ├── base/                   # main.css, global.css (variables, reset)
+│   ├── components/             # buttons.css, cards.css, tags.css
+│   ├── layout/                 # navbar.css, footer.css, section.css
+│   └── pages/                  # hero.css, about.css, skills.css, projects.css, contact.css
 ├── media/
 │   ├── fotocv.jpeg             # Foto de perfil (hero)
 │   ├── about-imagen.png        # Imagen "Sobre mí"
-│   ├── SistemaAcademico.png    # Capturas de proyectos
-│   ├── Gestion inventario.png
-│   ├── BienvenidaAppLibreria.png
-│   ├── OrangeBlue.png
+│   ├── sistema-academico.png   # Capturas de proyectos
+│   ├── gestion-inventario.png
+│   ├── bienvenida-app-libreria.png
+│   ├── orange-blue.png
 │   └── cvisaacjesusacevedo.pdf # CV descargable
 └── README.md                   # Este archivo
 ```

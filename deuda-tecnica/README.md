@@ -38,7 +38,7 @@
 
 ## ✨ Funcionalidades Detalladas
 
-### 1. Tema Claro/Oscuro (`JS/them.js`)
+### 1. Tema Claro/Oscuro (`js/theme.js`)
 
 ```javascript
 // Persistencia en localStorage
@@ -57,7 +57,7 @@ themeToggle.addEventListener('click', () => {
 - **Transiciones:** CSS `transition: background-color 0.3s, color 0.3s` en `:root`
 - **Detección sistema:** `prefers-color-scheme` como fallback inicial
 
-### 2. Formulario de Contacto (`JS/Form.js`)
+### 2. Formulario de Contacto (`js/form.js`)
 
 ```javascript
 // Validación en tiempo real
@@ -357,10 +357,10 @@ jobs:
 npx html-validate index.html
 
 # Lint CSS
-npx stylelint "Style/**/*.css"
+npx stylelint "css/**/*.css"
 
 # Lint JS
-npx eslint JS/**/*.js
+npx eslint js/**/*.js
 
 # Accesibilidad
 # axe-core en DevTools → 0 violations
