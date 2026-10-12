@@ -16,6 +16,39 @@
   --shadow-hover: 0 30px 80px rgba(0,0,0,.5);
   --radius: 24px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Escala tipográfica */
+  --fs-xs:    0.75rem;
+  --fs-sm:    0.875rem;
+  --fs-base:  1rem;
+  --fs-md:    1.125rem;
+  --fs-lg:    1.375rem;
+  --fs-xl:    1.75rem;
+  --fs-2xl:   2.25rem;
+  --fs-3xl:   3rem;
+  --fs-4xl:   3.75rem;
+
+  /* Alturas de línea */
+  --lh-tight:  1.1;
+  --lh-snug:   1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  /* Interletraje */
+  --ls-tight:  -0.02em;
+  --ls-normal: 0;
+  --ls-wide:   0.05em;
+  --ls-wider:  0.1em;
+
+  /* Espaciado */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-5: 3rem;
+  --sp-6: 4rem;
+  --sp-7: 6rem;
+  --sp-8: 8rem;
 }
 
 /* ☀️ Light Mode */
@@ -29,7 +62,42 @@ body.light {
   --brand-2: #0d9488;
   --brand-light: rgba(124, 58, 237, 0.08);
   --shadow: 0 4px 20px rgba(0,0,0,.06);
-  --shadow-hover: 0 12px 30px rgba(0,0,0,.1);
+  --shadow-hover: 0 20px 40px rgba(0,0,0,.1);
+}
+
+body.light .project,
+body.light .skill-card,
+body.light .timeline-content,
+body.light .hero-badge,
+body.light .floating-badge,
+body.light .stat-card {
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.light .form-control {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+body.light .form-control:focus {
+  background: #ffffff;
+  border-color: var(--brand);
+}
+
+body.light .project-description,
+body.light .timeline-tasks li,
+body.light .about-intro,
+body.light .hero-description {
+  color: #374151;
+}
+
+body.light .timeline::before {
+  opacity: 0.6;
+}
+
+body.light .project-image::after {
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 body.light .project,

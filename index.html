@@ -100,39 +100,76 @@
   <!-- HERO SECTION -->
   <header id="inicio" class="hero">
     <div class="hero-card">
-      <div>
-        <span class="badge">Disponible para oportunidades</span>
-        <p class="fs-5 mt-3 mb-0" style="color: var(--muted); font-weight: 500;">Hola, soy</p>
-        <h1 class="display-4 fw-bold grad-text">Isaac Acevedo</h1>
-
-        <div class="tags">
-          <span class="tag">Desarrollador Web</span>
-          <span class="tag">Vue.js</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">ASP.NET Core</span>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Disponible para oportunidades
         </div>
 
-        <p>
-          Desarrollador Web con experiencia práctica en desarrollo full-stack y <strong>Analista en Sistemas en curso (3er año)</strong>.
-          Trabajo con <strong>Vue 3, TypeScript y ASP.NET Core</strong>, y con bases de datos <strong>SQL Server y PostgreSQL</strong>.
-          Aplico <strong>metodologías ágiles</strong> (Scrum/Kanban), <strong>Git</strong> y diseño de <strong>APIs REST</strong>
-          en cada proyecto. Me destaco por la <strong>comunicación clara, proactividad y aprendizaje continuo</strong>.
+        <p class="hero-greeting">Hola, soy</p>
+        <h1 class="hero-title">
+          <span class="grad-text">Isaac Acevedo</span>
+        </h1>
+
+        <p class="hero-role">
+          <span>Desarrollador Web</span>
+          <span class="divider">·</span>
+          <span>Full-Stack</span>
         </p>
 
-        <div class="d-flex gap-3 mt-4">
-          <a class="btn-brand" href="#proyectos">Ver proyectos</a>
-          <a class="btn-ghost" href="#contacto">Contacto</a>
+        <p class="hero-description">
+          Desarrollador Web con experiencia práctica en desarrollo full-stack y
+          <strong>Analista en Sistemas en curso (3er año)</strong>.
+          Trabajo con <strong>Vue 3, TypeScript y ASP.NET Core</strong>, y con
+          bases de datos <strong>SQL Server y PostgreSQL</strong>.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn-brand btn-lg" href="#proyectos">
+            Ver proyectos
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a class="btn-ghost btn-lg" href="#contacto">Contacto</a>
+        </div>
+
+        <div class="hero-stack">
+          <span class="stack-label">Stack actual:</span>
+          <div class="stack-items">
+            <span class="stack-item">Vue 3</span>
+            <span class="stack-item">TypeScript</span>
+            <span class="stack-item">.NET 9</span>
+            <span class="stack-item">SQL Server</span>
+          </div>
         </div>
       </div>
 
-      <div class="portrait">
-        <img
-          src="media/fotocv.jpeg"
-          alt="Foto profesional de Isaac Acevedo"
-          loading="eager"
-          width="320"
-          height="320"
-        />
+      <div class="hero-portrait">
+        <div class="portrait-glow"></div>
+        <div class="portrait-frame">
+          <img
+            src="media/fotocv.jpeg"
+            alt="Foto profesional de Isaac Acevedo"
+            loading="eager"
+            width="400"
+            height="400"
+          />
+        </div>
+        <div class="floating-badge floating-badge--top">
+          <span class="badge-icon">💼</span>
+          <div>
+            <div class="badge-label">Experiencia</div>
+            <div class="badge-value">5 años</div>
+          </div>
+        </div>
+        <div class="floating-badge floating-badge--bottom">
+          <span class="badge-icon">🚀</span>
+          <div>
+            <div class="badge-label">Proyectos</div>
+            <div class="badge-value">+10</div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -140,33 +177,69 @@
   <!-- ABOUT SECTION -->
   <section id="sobre-mi" class="section">
     <div class="container">
-      <div class="about-card">
-        <img
-          src="media/about-imagen.png"
-          alt="Isaac Acevedo trabajando en desarrollo de software"
-          loading="lazy"
-          width="400"
-          height="300"
-        />
-        <div>
-          <h2>Sobre mí</h2>
-          <p class="lead">
-            Soy <strong>Desarrollador Web</strong> orientado a construir soluciones útiles y bien estructuradas.
-            Me centro en escribir <strong>código limpio y mantenible</strong>, aplicando buenas prácticas de desarrollo.
+      <h2>Sobre mí</h2>
+      <p class="lead">Perfil profesional, motivación y tecnologías en formación.</p>
+
+      <div class="about-layout">
+        <div class="about-visual">
+          <div class="about-image-wrapper">
+            <img
+              src="media/about-imagen.png"
+              alt="Isaac Acevedo trabajando en desarrollo de software"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-value">5+</div>
+              <div class="stat-label">Años en industria</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">10+</div>
+              <div class="stat-label">Proyectos</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">3</div>
+              <div class="stat-label">Año Analista</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="about-intro">
+            Soy <strong>Desarrollador Web</strong> orientado a construir soluciones
+            útiles y bien estructuradas. Me centro en escribir
+            <strong>código limpio y mantenible</strong>, aplicando buenas prácticas.
           </p>
-          <p>
-            Construyo aplicaciones full-stack con <strong>Vue 3 + TypeScript</strong> en el frontend y
-            <strong>ASP.NET Core con SQL Server / PostgreSQL</strong> en el backend: APIs REST con autenticación JWT,
-            arquitectura en capas, tests automatizados y despliegue en la nube. Uso <strong>Git</strong> para el control de versiones
-            y sigo ampliando mi stack con <strong>Node.js y React</strong>.
-          </p>
-          <p>
-            Como <strong>Tutor de Programación</strong> en el Instituto Tupac Amaru (2023–2024) guié a estudiantes en proyectos reales,
-            lo que me fortaleció en <strong>comunicación técnica, trabajo en equipo y capacidad para recibir y dar feedback</strong>.
-            Complemento mi perfil con <strong>5 años de experiencia en control de operaciones</strong>, donde desarrollé
-            <strong>capacidad analítica, organización y orientación a resultados</strong>.
-          </p>
-          <div class="d-flex gap-2 flex-wrap mt-4">
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">💻</div>
+              <div>
+                <div class="highlight-title">Full-Stack Developer</div>
+                <div class="highlight-desc">Vue 3 + TypeScript · ASP.NET Core + SQL Server / PostgreSQL</div>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">🎓</div>
+              <div>
+                <div class="highlight-title">Tutor de Programación</div>
+                <div class="highlight-desc">Instituto Tupac Amaru (2023-2024)</div>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">📊</div>
+              <div>
+                <div class="highlight-title">5 años en operaciones</div>
+                <div class="highlight-desc">Control de datos, organización y orientación a resultados</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta">
             <a class="btn-brand" href="#proyectos">Mis proyectos</a>
             <a class="btn-ghost" href="#contacto">Hablemos</a>
           </div>
@@ -181,35 +254,39 @@
       <h2 class="mb-1">Experiencia</h2>
       <p class="lead mb-5">Trayectoria que combina desarrollo, tecnología y gestión de datos.</p>
 
-      <div class="experience-list">
-        <!-- Experiencia 1 -->
-        <article class="experience-card">
-          <div class="experience-header">
-            <h3>Tutor de Programación y Herramientas Digitales</h3>
-            <span class="experience-date">Feb 2023 – Nov 2024</span>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Tutor de Programación y Herramientas Digitales</h3>
+              <span class="timeline-date">Feb 2023 – Nov 2024</span>
+            </div>
+            <p class="timeline-company">Instituto Tupac Amaru</p>
+            <ul class="timeline-tasks">
+              <li>Dicté clases prácticas de <strong>HTML, CSS, JavaScript y Vue.js</strong>, guiando a estudiantes en proyectos reales.</li>
+              <li>Revisé y corregí código, reforzando buenas prácticas de programación y debugging.</li>
+              <li>Desarrollé comunicación técnica y capacidad de explicar conceptos complejos.</li>
+            </ul>
           </div>
-          <p class="experience-company">Instituto Tupac Amaru</p>
-          <ul class="experience-tasks">
-            <li>Dicté clases prácticas de <strong>HTML, CSS, JavaScript y Vue.js</strong>, guiando a estudiantes en la construcción de proyectos reales.</li>
-            <li>Revisé y corregí código, reforzando <strong>buenas prácticas de programación, debugging</strong> e interpretación de consignas técnicas.</li>
-            <li>Desarrollé una fuerte <strong>comunicación técnica</strong> y la habilidad de explicar conceptos complejos de forma clara.</li>
-          </ul>
-        </article>
+        </div>
 
-        <!-- Experiencia 2 -->
-        <article class="experience-card">
-          <div class="experience-header">
-            <h3>Operario + Desarrollador de Sistemas Internos</h3>
-            <span class="experience-date">Jun 2021 – Actualidad</span>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Operario + Desarrollador de Sistemas Internos</h3>
+              <span class="timeline-date">Jun 2021 – Actualidad</span>
+            </div>
+            <p class="timeline-company">Toxic Shine</p>
+            <ul class="timeline-tasks">
+              <li>Diseñé e implementé por iniciativa propia un <strong>sistema de control de gestión</strong> que reemplazó procesos manuales.</li>
+              <li>En 2023 desarrollé <strong>Sistema Industrial</strong>, web full-stack con <strong>+40% productividad</strong> y <strong>−60% errores</strong>.</li>
+              <li>Analicé grandes volúmenes de información diariamente bajo plazos exigentes.</li>
+              <li>Coordiné equipos multidisciplinarios fortaleciendo comunicación y organización.</li>
+            </ul>
           </div>
-          <p class="experience-company">Toxic Shine</p>
-          <ul class="experience-tasks">
-            <li>Diseñé e implementé, por <strong>iniciativa propia</strong>, un <strong>sistema de control de gestión en Excel</strong> (macros y fórmulas avanzadas) que reemplazó procesos manuales.</li>
-            <li>En 2023 desarrollé <strong>Sistema Industrial</strong>, una aplicación web full-stack que reemplazó el Excel, logrando <strong>+40% de productividad</strong> y <strong>−60% de errores técnicos</strong>.</li>
-            <li>Analicé y validé grandes volúmenes de información diariamente, detectando inconsistencias bajo plazos exigentes.</li>
-            <li>Coordiné <strong>equipos multidisciplinarios</strong>, fortaleciendo comunicación, organización y trabajo en equipo.</li>
-          </ul>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -319,7 +396,14 @@
 
       <div class="projects-grid">
         <!-- Proyecto destacado: Sistema Industrial -->
-        <article class="project">
+        <article class="project project--featured">
+          <div class="project-badge">★ Destacado</div>
+
+          <div class="project-image">
+            <img src="media/sistema-industrial.png" alt="Dashboard de Sistema Industrial" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+          </div>
+
+          <div class="project-body">
           <header class="project-header">
             <h3 class="project-title">Sistema Industrial</h3>
             <span class="project-tags">Vue 3 · TypeScript · .NET 9 · SQL Server</span>
@@ -342,10 +426,16 @@
               <span class="btn-icon"></span> Código
             </a>
           </footer>
+          </div>
         </article>
 
         <!-- Proyecto 1: Sistema de Gestión Institucional -->
         <article class="project">
+          <div class="project-image">
+            <img src="media/sistema-academico.png" alt="Sistema de Gestión Institucional" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+          </div>
+
+          <div class="project-body">
           <header class="project-header">
             <h3 class="project-title">Sistema de Gestión Institucional</h3>
             <span class="project-tags">Vue 3 · TypeScript · ASP.NET Core · SQL Server</span>
@@ -363,10 +453,16 @@
               <span class="btn-icon"></span> Código
             </a>
           </footer>
+          </div>
         </article>
 
         <!-- Proyecto 2: Brana -->
         <article class="project">
+          <div class="project-image">
+            <img src="media/brana.png" alt="Brana — Esoteric Store" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+          </div>
+
+          <div class="project-body">
           <header class="project-header">
             <h3 class="project-title">Brana — Esoteric Store</h3>
             <span class="project-tags">Vue 3 · ASP.NET Core · PostgreSQL · Docker</span>
@@ -384,10 +480,16 @@
               <span class="btn-icon"></span> Código
             </a>
           </footer>
+          </div>
         </article>
 
         <!-- Proyecto 3: MyMQueens -->
         <article class="project">
+          <div class="project-image">
+            <img src="media/mymqueens.png" alt="MyMQueens" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+          </div>
+
+          <div class="project-body">
           <header class="project-header">
             <h3 class="project-title">MyMQueens</h3>
             <span class="project-tags">Vue 3 · Vite · TypeScript</span>
@@ -405,10 +507,16 @@
               <span class="btn-icon"></span> Código
             </a>
           </footer>
+          </div>
         </article>
 
         <!-- Proyecto 4: Este portfolio -->
         <article class="project">
+          <div class="project-image">
+            <img src="media/portfolio.png" alt="Este portfolio" loading="lazy" onerror="this.closest('.project-image').classList.add('project-image--empty')">
+          </div>
+
+          <div class="project-body">
           <header class="project-header">
             <h3 class="project-title">Este portfolio</h3>
             <span class="project-tags">HTML5 · CSS3 · Bootstrap 5.3 · JavaScript</span>
@@ -423,6 +531,7 @@
               <span class="btn-icon"></span> Código
             </a>
           </footer>
+          </div>
         </article>
       </div>
 
@@ -569,15 +678,42 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="text-center">
+  <footer class="site-footer">
     <div class="container">
-      <small>
-        © <span id="year"></span> Isaac Acevedo – Desarrollador Web
-        <br>
-        Vue.js · TypeScript · ASP.NET Core · SQL Server · PostgreSQL · APIs REST · Git
-        <br>
-        Hecho con ❤️ y mucho ☕
-      </small>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="footer-brand">Isaac Acevedo</h4>
+          <p class="footer-tagline">Desarrollador Web Full-Stack</p>
+          <p class="footer-desc">
+            Construyo aplicaciones web con foco en código limpio,
+            buenas prácticas y experiencia de usuario.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5 class="footer-title">Contacto</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:isaac.acevedor1610@gmail.com">isaac.acevedor1610@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/isaac-acevedo-9a41a4282/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/Isaacjesusacevedo" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Isaac Acevedo · Todos los derechos reservados</p>
+        <p>Hecho con esfuerzo en Argentina</p>
+      </div>
     </div>
   </footer>
 
