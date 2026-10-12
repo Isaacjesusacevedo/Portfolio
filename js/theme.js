@@ -1,42 +1,49 @@
 const toggleBtn = document.getElementById("theme-toggle");
 const body = document.body;
+const root = document.documentElement;
 
 if (!toggleBtn) {
     console.error("ERROR: No se encontró el botón con ID 'theme-toggle'");
 } else {
-    // 1. Cargar tema inicial con transición suave
+    // 1. Cargar tema inicial (sin transición para evitar flash)
     const savedTheme = localStorage.getItem("theme") || "light";
-    
-    // Agregar clase sin transición para evitar flash
+
     body.style.transition = 'none';
     body.classList.add(savedTheme);
     toggleBtn.textContent = savedTheme === "light" ? "☀️" : "🌙";
-    
-    // Restaurar transiciones después de un frame
+
     requestAnimationFrame(() => {
         body.style.transition = '';
     });
 
-    // 2. Evento Click con animación del botón
+    // 2. Evento Click — cambio INSTANTÁNEO
     toggleBtn.addEventListener("click", () => {
-        // Animación del botón
-        toggleBtn.style.transform = "rotate(360deg) scale(0.9)";
-        
+        // Deshabilitar transiciones durante el switch
+        root.classList.add('theme-switching');
+
+        // Detectar tema actual y cambiar al opuesto
+        const isLight = body.classList.contains("light");
+        const newTheme = isLight ? "dark" : "light";
+
+        body.classList.remove(isLight ? "light" : "dark");
+        body.classList.add(newTheme);
+        localStorage.setItem("theme", newTheme);
+
+        // Actualizar ícono al instante
+        toggleBtn.textContent = newTheme === "light" ? "☀️" : "🌙";
+
+        // Animar el botón (rotación corta)
+        toggleBtn.style.transform = "rotate(180deg)";
         setTimeout(() => {
             toggleBtn.style.transform = "";
-            
-            if (body.classList.contains("light")) {
-                body.classList.remove("light");
-                body.classList.add("dark");
-                localStorage.setItem("theme", "dark");
-                toggleBtn.textContent = "🌙";
-            } else {
-                body.classList.remove("dark");
-                body.classList.add("light");
-                localStorage.setItem("theme", "light");
-                toggleBtn.textContent = "☀️";
-            }
-        }, 150);
+        }, 200);
+
+        // Re-habilitar transiciones en el siguiente frame
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                root.classList.remove('theme-switching');
+            });
+        });
     });
 }
 

@@ -157,7 +157,7 @@ body {
     var(--bg);
 
   color: var(--text);
-  transition: background .4s ease, color .3s ease;
+  transition: color 0.15s ease;
   min-height: 100vh;
   line-height: 1.6;
   overflow-x: hidden;
@@ -312,4 +312,12 @@ a {
 
 .animate-in {
   animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Deshabilitar transiciones durante cambio de tema */
+.theme-switching *,
+.theme-switching *::before,
+.theme-switching *::after {
+  transition: none !important;
+  animation-duration: 0s !important;
 }
