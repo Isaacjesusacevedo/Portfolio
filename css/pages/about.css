@@ -121,8 +121,53 @@
 
 .about-cta {
   display: flex;
+  align-items: center;
   gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
   flex-wrap: wrap;
+}
+
+.about-cta .btn-brand,
+.about-cta .btn-ghost {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--fs-sm);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+}
+
+.about-cta .btn-brand:hover,
+.about-cta .btn-ghost:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.about-cta .btn-ghost {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(135deg, var(--brand), var(--brand-2)) border-box;
+}
+
+.about-cta .btn-brand:focus-visible,
+.about-cta .btn-ghost:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (max-width: 576px) {
+  .about-cta {
+    width: 100%;
+  }
+  .about-cta .btn-brand,
+  .about-cta .btn-ghost {
+    flex: 1 1 auto;
+    padding: 0.7rem 1rem;
+    font-size: var(--fs-xs);
+  }
 }
 
 @media (max-width: 992px) {
