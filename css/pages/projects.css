@@ -224,4 +224,21 @@
   .project {
     min-height: auto;
   }
+  .project-body {
+    padding: 1.25rem;
+  }
+  .project-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* Touch: sin hover, siempre la imagen default */
+@media (hover: none) {
+  .project-img-hover {
+    display: none !important;
+  }
+  .project-img-default {
+    opacity: 1 !important;
+  }
 }

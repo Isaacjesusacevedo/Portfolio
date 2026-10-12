@@ -138,3 +138,27 @@
     margin-top: 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .about-image-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    overflow: visible;
+    margin-top: 1rem;
+  }
+
+  .stat-card {
+    min-width: 0;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .stat-value {
+    font-size: clamp(1.1rem, 6vw, 1.4rem);
+  }
+}

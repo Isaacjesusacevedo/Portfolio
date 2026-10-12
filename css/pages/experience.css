@@ -137,3 +137,13 @@
     gap: 0.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .timeline { padding-left: 1.5rem; }
+  .timeline-marker { left: -1.5rem; }
+  .timeline-content {
+    padding: 1rem;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+}
