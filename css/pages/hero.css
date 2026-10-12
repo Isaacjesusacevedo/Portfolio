@@ -359,4 +359,14 @@ header.hero::after {
     width: min(240px, 72vw);
     height: min(240px, 72vw);
   }
+
+  .floating-badge--top {
+    top: 8px;
+    right: 8px;
+  }
+
+  .floating-badge--bottom {
+    bottom: 8px;
+    left: 8px;
+  }
 }

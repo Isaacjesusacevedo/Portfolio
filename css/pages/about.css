@@ -8,6 +8,8 @@
 .about-visual {
   position: relative;
   width: 100%;
+  max-width: 780px;
+  margin-inline: auto;
 }
 
 .about-image-wrapper {
